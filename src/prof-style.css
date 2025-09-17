@@ -1,0 +1,86 @@
+.profile-edit {
+  font-family: "Nova", sans-serif;
+  padding-top: 7rem; /* zachowujemy miejsce na fixed header */
+  width: 100%;        /* upewniamy się, że wrapper zajmuje całą szerokość */
+  min-height: 100vh;  /* pełna wysokość ekranu */
+  background-color: #f3f4f6; /* opcjonalnie tło całej strony */
+}
+
+.header {
+  z-index: 20;
+  width: 100%;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* dla pionowego wyrównania */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border-bottom: 1px solid #e4e4e7; 
+}
+
+.logo {
+  height: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    height: 2rem;
+  }
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 768px; /* zwiększamy max-width, bardziej responsywne */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box; /* zapobiega problemom z paddingiem */
+}
+
+.profile-picture {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 9999px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.font-orpheus {
+  font-family: "Orpheus", serif;
+}
+
+.member-since {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  color: rgba(0,0,0,0.25);
+}
+
+/* Interests */
+.single-interest {
+  cursor: not-allowed;
+  transition: background-color 0.2s;
+}
+
+.handles a:hover,
+.single-interest:hover {
+  background-color: #e4e4e7;
+}
+
+/* Responsywność */
+@media (max-width: 640px) {
+  .profile-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%; /* na mobile zajmuje pełną szerokość */
+  }
+}
