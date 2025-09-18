@@ -4,6 +4,7 @@ import {Routes, Route} from "react-router-dom";
 import Home from "./pages/Home";
 import Favorite from "./pages/Favirotes";
 import NavBar from "./components/NavBar";
+import "./css/App.css";
 
 function App() {
   const movieNumber = 1;

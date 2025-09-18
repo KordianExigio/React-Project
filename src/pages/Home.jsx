@@ -1,20 +1,33 @@
 import MovieCard from "../components/MovieCard";
-import { useState} from "react";
+import { useState, useEffect} from "react";
+import { searchMovies, getPopularMovies } from "../services/api";
+import "../css/Home.css";
 
 
 function Home(){
 
      const [searchQuery, setSeatchQuery] = useState("");
+     const [movies, setMovies] = useState([]);
+     const [error, setError] = useState(null);
+     const [loading,setLoading] = useState(true);
 
+     useEffect(() => {
+          const loadPopularMovies = async () => {
+               try{
+                    const popularMovies = await getPopularMovies();
+                    setMovies(popularMovies);
+               } catch(err){
+                    console.log(error);
+                    setError("Bład załadowania filmów");
+               }
+               finally{
+                    setLoading(false);
+               }
+          }
 
-     const movies = [
-          { id: 1, title: "John Wick", release_date: "2014" },
-          { id: 2, title: "Avengers: Endgame", release_date: "2019" },
-          { id: 3, title: "Inception", release_date: "2010" },
-          { id: 4, title: "The Dark Knight", release_date: "2008" },
-          { id: 5, title: "Interstellar", release_date: "2014" },
-          { id: 6, title: "Parasite", release_date: "2019" },
-     ];
+          loadPopularMovies();
+     }, [])
+
 
 
      const handleSearch = (e) => {
@@ -25,7 +38,7 @@ function Home(){
 
      return(
           <div className="home">
-               <form onSubmit={handleSearch} className="seatch-form">
+               <form onSubmit={handleSearch} className="search-form">
                     <input
                      type="text" 
                      placeholder="Search for movies..." 
@@ -33,7 +46,7 @@ function Home(){
                      value={searchQuery}
                      onChange={(e) => setSeatchQuery(e.target.value)}
                       />
-                    <button className="search-btn" type="submot">Search</button>
+                    <button className="search-button" type="submot">Search</button>
                </form>
 
                <div className="movies-grid">

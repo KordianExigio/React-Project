@@ -1,3 +1,5 @@
+import "../css/Favorites.css";
+
 function Favorite(){
      return(<div className="favorites-empty">
           <h2>Brak Ulubionych filmów</h2>
@@ -6,3 +8,4 @@ function Favorite(){
 }
 
 export default Favorite
+
