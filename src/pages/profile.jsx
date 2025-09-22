@@ -1,8 +1,8 @@
 import React from "react";
-import "./prof-style.css";
+import "../css/prof-style.css";
 
 const UserProfile = () => {
-  // Przykładowe dane profilu bo nie mam dostepu do
+  
   const customer = {
     first_name: "Jan",
     last_name: "Kowalski",

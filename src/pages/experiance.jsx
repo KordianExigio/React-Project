@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function ExperienceBooking() {
-  // przykładowe dane
+
   const experience = {
     id: 1,
     title: "Degustacja win w Toskanii",
@@ -32,7 +32,7 @@ export default function ExperienceBooking() {
     },
   ];
 
-  const customer = null; // ustaw na obiekt, żeby przetestować flow zalogowanego
+  const customer = null;
 
   const maxSeats = Math.max(
     0,

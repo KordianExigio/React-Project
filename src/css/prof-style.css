@@ -1,9 +1,8 @@
 .profile-edit {
   font-family: "Nova", sans-serif;
-  padding-top: 7rem; /* zachowujemy miejsce na fixed header */
-  width: 100%;        /* upewniamy się, że wrapper zajmuje całą szerokość */
-  min-height: 100vh;  /* pełna wysokość ekranu */
-  background-color: #f3f4f6; /* opcjonalnie tło całej strony */
+  padding-top: 7rem; 
+  width: 100%;       
+  background-color: #f3f4f6; 
 }
 
 .header {
@@ -15,7 +14,7 @@
   padding-right: 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* dla pionowego wyrównania */
+  align-items: center; 
   position: fixed;
   top: 0;
   left: 0;
@@ -35,7 +34,7 @@
 
 .profile-container {
   width: 100%;
-  max-width: 768px; /* zwiększamy max-width, bardziej responsywne */
+  max-width: 768px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +42,7 @@
   padding-right: 1rem;
   margin-left: auto;
   margin-right: auto;
-  box-sizing: border-box; /* zapobiega problemom z paddingiem */
+  box-sizing: border-box; 
 }
 
 .profile-picture {
@@ -65,7 +64,7 @@
   color: rgba(0,0,0,0.25);
 }
 
-/* Interests */
+
 .single-interest {
   cursor: not-allowed;
   transition: background-color 0.2s;
@@ -76,11 +75,11 @@
   background-color: #e4e4e7;
 }
 
-/* Responsywność */
+
 @media (max-width: 640px) {
   .profile-container {
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: 100%; /* na mobile zajmuje pełną szerokość */
+    max-width: 100%; 
   }
 }
