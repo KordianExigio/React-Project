@@ -1,8 +1,9 @@
 .profile-edit {
   font-family: "Nova", sans-serif;
-  padding-top: 7rem; 
+  padding-top: 1rem; 
   width: 100%;       
   background-color: #f3f4f6; 
+  padding-bottom: 2rem;
 }
 
 .header {

@@ -6,9 +6,9 @@ export default function ConfirmationPage() {
     <html>
       <head>
         <title>Confirmation for Experience - Shop</title>
-      </head>john
+      </head>
       <body>
-        <div className="z-20 w-full py-10 flex justify-center fixed top-0 left-0 px-4 bg-white border-b border-zinc-200">
+        {/* <div className="z-20 w-full py-10 flex justify-center fixed top-0 left-0 px-4 bg-white border-b border-zinc-200">
           <a href="/">
             <img
               className="h-8"
@@ -16,16 +16,11 @@ export default function ConfirmationPage() {
               alt="logo"
             />
           </a>
-        </div>
+        </div> */}
 
         <div className="mt-32" />
 
-        <img
-          src="https://example.com/image.jpg"
-          className="object-cover w-full"
-          style={{ height: "700px" }}
-          alt="experience"
-        />
+      
 
         <div
           className="w-full mx-auto font-orpheus font-light flex flex-col px-4"

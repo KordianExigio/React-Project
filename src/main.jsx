@@ -5,13 +5,9 @@ import { BrowserRouter } from "react-router-dom"
 import App from './App'
 import "./css/index.css"
 import ExperienceBooking from './pages/experiance'
-
+import UserProfile from './pages/profile'
 
 
 createRoot(document.getElementById('root')).render(
-  <>
-    <BrowserRouter>
-      <ExperienceBooking/>
-    </BrowserRouter>
-  </>
+      <App></App>
 )
